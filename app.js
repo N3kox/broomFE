@@ -40,7 +40,7 @@ App({
     var that = this;
     //连接
     wx.connectSocket({
-      url: 'wss://bzpnb.xyz:8080',
+      url: 'wss://',
       //url: 'ws://localhost:83'
     });
     wx.onSocketOpen(function (res ) {
@@ -51,7 +51,7 @@ App({
     wx.onSocketClose(function (res) {
       that.globalData.socket_open = false;
       wx.connectSocket({
-        url: 'wss://bzpnb.xyz:8080',
+        url: 'wss://',
         //url: 'ws://localhost:83'
       })
       wx.onSocketOpen(function (res) {

@@ -1,0 +1,17 @@
+<!--pages/myClassS/myClassS.wxml-->
+<view class="padding" style="background-color: #F5F5F5; height: 100%; width: 100%;">
+
+  <view wx:for="{{classInfo}}" wx:key="number" wx:for-item="item">
+    <view bindtap="enterClass" data-cid="{{item.cid}}" class="padding-left padding-right margin-top" style="position: relative; height: 350rpx;">
+      <view class="class_background" style="height: 100%;"><image class="round-sm" style="height: 100%; width: 100%" src="../../../images/class.jpg"></image></view>
+      <view class="class-title text-xl text-white">课程名称：{{item.name}}</view>
+      <!--<view class="class-infor-up text-df text-white">附加内容</view>-->
+      <view class="class-infor-down text-df text-white">课程编码：{{item.code}}</view>
+    </view>
+
+    <view class="line margin-top"></view>
+  </view>
+
+  <view wx:if="{{noroom==true}}">空</view>
+
+</view>

@@ -1,0 +1,15 @@
+.mycanvas {
+  width: 400rpx;
+  height: 400rpx;
+  background: white;
+}
+
+.mybutton {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.disable_scoll{
+  overflow: hidden;
+  height: 100vh;
+}

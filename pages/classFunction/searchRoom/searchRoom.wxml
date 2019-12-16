@@ -1,0 +1,18 @@
+<!--pages/classFunction/searchRoom/searchRoom.wxml-->
+<view style="background: #F5F5F5; height: 100%; width: 100%;">
+  <view class="flex padding padding-bottom-xs padding-left-xs margin margin-bottom-xs">
+    <view class="text-xl text-black">请输入房间号进行查询</view>
+  </view>
+
+  <view class="cu-form-group padding padding-top-xs padding-bottom-xs margin margin-top-xs margin-bottom-xs">
+    <input placeholder='CODE HERE' bindinput="inputRoomId"value='{{roomid}}'></input>
+  </view>
+
+  <view class="padding padding-top-xs">
+    <view class="text-lg text-black">点击以确定房间:</view>
+    <view wx:for="{{roomList}}" wx:for-item="item">
+      <view class="padding margin round-sm text-center bg-{{item.roomcolor}}" bindtap='returnRoom' data-roomid='{{item.roomid}}'>Room:{{item.roomid}}</view>
+    </view> 
+  </view>
+
+</view>

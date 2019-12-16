@@ -1,0 +1,39 @@
+<!--pages/login/login.wxml-->
+  <view class="padding bg-gradual-blue"  style="height: 100%; width: 100%;">
+
+    <view class="flex text-center padding margin">
+      <view class="flex-sub padding text-xxl">Bistu智慧教室</view>
+    </view>
+
+    <view class="flex-sub padding-top-xs padding-right-sm padding-left-sm text-center">
+      <view class="cu-form-group radius bg-cyan light">
+        <text class="cuIcon-my lg text-gray"></text>
+        <input placeholder='请输入账号' type="number" bindinput="StuNoInput"></input>
+      </view>
+    </view>
+
+    <view class="flex-sub padding-top-xs padding-right-sm padding-left-sm text-center">
+      <view class="cu-form-group radius bg-cyan light">
+        <text class="cuIcon-unlock lg text-gray"></text>
+        <input placeholder='请输入密码' password="true" bindinput="PasswordInput"></input>
+      </view>
+    </view>
+
+    <view class="flex flex-direction padding padding-bottom-xs">
+      <button class="cu-btn lg bg-olive shadow" bindtap="login">登录</button>
+    </view>
+
+    <view class="flex flex-direction padding padding-top-xs">
+      <button class="cu-btn lg bg-olive shadow" type="primary" open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo">微信授权登录</button>
+    </view>
+
+    <view class="flex padding-top-sm padding-right-sm padding-left-sm text-center justify-center align-center">
+      <view class="flex-sub">
+        <button class="cu-btn line-white shadow" bindtap="register">注册账号</button>
+      </view>
+
+      <view class="flex-sub">
+        <button class="cu-btn line-white shadow">忘记密码</button>
+      </view>
+    </view>
+  </view>

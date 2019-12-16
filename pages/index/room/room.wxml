@@ -1,0 +1,11 @@
+<view class="padding" style="background: #F5F5F5; height: 100%; width: 100%;">
+
+  <view wx:for="{{classroomList}}" wx:key="number" wx:for-item="item" >
+    <view wx:if="{{item.locked=='否'||isStudent==false}}" class="flex padding-lg margin-bottom-sm round bg-{{item.color}} align-center text-center" bindtap='getin_room' data-room="{{item.number}}">
+      <view class="cuIcon-title lg text-white"></view>
+      <view class="flex-sub text-xl text-white text-shadow">教室号：{{item.number}}</view>
+      <view class="flex-sub align-end">总座椅：{{item.chair_sum}}</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,19 @@
+<!--pages/newClass/newClass.wxml-->
+<view class="padding" style="background-color: #F5F5F5; height: 100%; width: 100%;">
+
+  <view class="cu-form-group padding padding-bottom-xs margin">
+    <input type='text' placeholder='请输入课程名称' bindinput="classNameInput"/>
+  </view>
+
+  <view class="flex padding padding-left-lg align-center">
+    <view class="flex-twice">任课教室房间号:{{roomid}}</view>
+    <view class="flex-sub padding-left-xl">
+      <button class="cu-btn bg-yuanweiblue shadow" bindtap="chooseClass">选择教室</button>
+    </view>
+  </view>
+
+  <view class="flex flex-direction padding padding-top-xs">
+    <button class="cu-btn lg bg-olive shadow" bindtap="submitNewClass">确认创建</button>
+  </view>
+
+</view>

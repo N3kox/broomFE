@@ -1,0 +1,22 @@
+<!--pages/index/userinfor/userinfor.wxml-->
+<view class="padding" style="background: #F5F5F5; height: 100%; width: 100%;">
+
+  <view class="nav-list">
+    <view class="nav-li bg-gaoliangred" open-type="navigate" bindtap="changeInfo">
+      <view class="nav-title">修改信息</view>
+      <view class="text-df">information</view>
+    </view>
+
+    <view class="nav-li bg-beautyorange" open-type="navigate" bindtap="setting">
+      <view class="nav-title">设置</view>
+      <view class="text-df">setting</view>
+    </view>
+
+    <view class="nav-li bg-green" open-type="navigate" bindtap="logout">
+      <view class="nav-title">登出</view>
+      <view class="text-df">logout</view>
+    </view>
+
+  </view>
+
+</view>

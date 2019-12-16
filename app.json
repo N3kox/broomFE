@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/main/main",
+    "pages/index/room/room",
+    "pages/index/userInfo/userInfo",
+    "pages/roomFunction/roomDisplay/roomDisplay",
+    "pages/userFunction/changeInfo/changeInfo",
+    "pages/classFunction/myClass/myClass",
+    "pages/classFunction/newClass/newClass",
+    "pages/classFunction/classDetail/classDetail",
+    "pages/classFunction/joinClass/joinClass",
+    "pages/classFunction/myClassS/myClassS",
+    "pages/classFunction/searchRoom/searchRoom",
+    "pages/classFunction/regResult/regResult",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1781b5",
+    "navigationBarTitleText": "Bistu智慧教室",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#5e616d",
+    "selectedColor": "#69a794",
+    "backgroundColor": "#white",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/main/main",
+        "text": "主页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_hl.png"
+      },
+      {
+        "pagePath": "pages/index/room/room",
+        "text": "教室查询",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search_hl.png"
+      },
+      {
+        "pagePath": "pages/index/userInfo/userInfo",
+        "text": "其他功能",
+        "iconPath": "images/list.png",
+        "selectedIconPath": "images/list_hl.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

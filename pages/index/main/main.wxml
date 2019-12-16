@@ -1,0 +1,68 @@
+<view wx:if="{{isStudent==true}}" class="padding" style="background: #F5F5F5; height: 100%; width: 100%;">
+
+  <view class="padding-lg margin-xl margin-top shadow align-center justify-between round-sm bg-white">
+    <view class="flex margin-bottom-sm align-end">
+      <view class="flex text-lg margin-right-sm">你好同学:</view>
+      <view class="flex text-xl">{{stu_no}}</view>
+    </view>
+
+    <view class="flex align-center">
+      <view class="flex-sub">
+        <view class="text-lg padding-bottom-xs">你的座椅所在教室:</view>
+        <view class="text-xl">{{room}}</view>
+      </view>
+      <button class="cu-btn line-greenblue shadow" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="enterChosenRoom"><text class>进入教室</text></button>
+    </view>
+  </view>
+
+  <view class="line"></view>
+
+  <view class="nav-list">
+    <view class="nav-li bg-cyan" open-type="navigate" bindtap="myClassS">
+      <view class="nav-title">我的班级</view>
+      <view class="text-df">my class</view>
+    </view>
+
+    <view class="nav-li bg-olive" open-type="navigate" bindtap="joinClass">
+      <view class="nav-title">加入班级</view>
+      <view class="text-df">join class</view>
+    </view>
+  </view>
+
+</view>
+
+<view wx:else class="padding" style="background: #F5F5F5; height: 100%; width: 100%;">
+
+  <view class="padding-lg margin-xl margin-top shadow round-sm bg-white">
+    <view class="flex margin-bottom-sm align-end">
+      <view class="flex text-lg margin-right-sm">您好教师:</view>
+      <view class="flex text-xl">111</view>
+    </view>
+
+    <view class="flex align-center">
+    <!--
+      <view class="flex-sub">
+      
+        <view class="text-lg padding-bottom-xs">您预定的教室:</view>
+        <view class="text-xl">1-3-302(是否？)</view>
+      </view>
+      <button class="cu-btn line-greenblue shadow" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="enterChosenRoom"><text class>进入教室</text></button>
+      -->
+    </view>
+  </view>
+
+  <view class="line"></view>
+
+  <view class="nav-list">
+    <view class="nav-li bg-butterblue" open-type="navigate" bindtap="myClass">
+      <view class="nav-title">我的班级</view>
+      <view class="text-df">my class</view>
+    </view>
+
+    <view class="nav-li bg-bamboogreen" open-type="navigate" bindtap="newClass">
+      <view class="nav-title">新建班级</view>
+      <view class="text-df">create class</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,25 @@
+<!--pages/changeInfo/changeInfo.wxml-->
+<view class="flex-sub margin margin-bottom-xs padding-top-xs padding-right-sm padding-left-sm text-center">
+  <view class="cu-form-group radius bg-grey light">
+    <text class="cuIcon-{{change_name.icon}} lg text-{{change_name.color}}"></text>
+    <input placeholder='修改用户名' type="text" bindinput="inputName" value="{{change_name.value}}"></input>
+  </view>
+</view>
+
+<view class="flex-sub margin margin-top-xs margin-bottom-xs padding-top-xs padding-right-sm padding-left-sm text-center">
+  <view class="cu-form-group radius bg-grey light">
+    <text class="cuIcon-{{change_password.icon}} lg text-{{change_password.color}}"></text>
+    <input placeholder='修改密码' type="password" bindinput="inputPassword"></input>
+  </view>
+</view>
+
+<view class="flex-sub margin margin-top-xs margin-bottom-xs padding-top-xs padding-right-sm padding-left-sm text-center">
+  <view class="cu-form-group radius bg-grey light">
+    <text class="cuIcon-{{check_password.icon}} lg text-{{check_password.color}}"></text>
+    <input placeholder='确认密码' type="password" bindinput="checkPassword"></input>
+  </view>
+</view>
+
+<view class="flex flex-direction margin padding padding-top-xs padding-bottom-xs">
+  <button class="cu-btn lg bg-olive shadow" bindtap="submitChange">提交</button>
+</view>

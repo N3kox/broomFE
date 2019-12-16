@@ -1,0 +1,7 @@
+<!--pages/classFunction/joinClass/joinClass.wxml-->
+<view class="padding" style="background-color: #F5F5F5; height: 100%; width: 100%;">
+  <text class="padding-left-xs text-xl">以班级代码查询：</text>
+  <view class="cu-form-group">
+    <input class="" placeholder='CODE HERE' bindinput='inputClassCode' value='{{code}}'></input>
+  </view>
+</view>

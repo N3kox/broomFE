@@ -1,0 +1,73 @@
+/* pages/test_student/test_student.wxss */
+
+page{
+  height: absolute;
+}
+.container{
+  height: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #B0C4DE;
+}
+/*
+.search_module{
+  display:flex;
+  flex-direction: row;
+
+}
+.search_input{
+  margin-top: 35px;
+  width:80%;
+  text-align: center;
+  text-size-adjust: auto;
+  height: 45px;
+  background-color: white;
+}
+
+.search_btn
+{
+  margin-top: 35px;
+  height: 45px;
+  width: 30%;
+}
+*/
+.list-display{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  border:0;
+  
+}
+.list-classroom{
+  width: 650rpx;
+  height: 100rpx;
+  padding: 15rpx;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  color: #999999;
+  border-radius: 0rpx;
+  align-items: center;
+  justify-content: center;
+  font-size: 35rpx;
+  border:0;
+}
+
+
+.room-number{
+  padding-left: 50rpx;
+  width: 375rpx;
+}
+.room-info-basic{
+  width: 275rpx;
+}
+
+.end{
+  height:1000px;
+}

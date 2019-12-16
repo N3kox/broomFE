@@ -1,0 +1,22 @@
+<view class="disable_scoll">
+  <view class="cu-form-group radius bg-white light">
+    <input placeholder='输入框' bindinput="typeString"></input>
+    <button class="cu-btn round bg-red" bindtap="typeStringSend">发送</button>
+  </view>
+
+  <view class="padding flex align-center justify-center">
+    <view class="flex">
+    <canvas class="mycanvas round-sm" canvas-id="canvas_move" bindtouchstart="touchStartCanvas" bindtouchmove="touchMoveCanvas" bindtouchend="touchEndCanvas">
+    </canvas>
+    </view>
+
+    <view class="padding justify-center">
+      <view class="margin-xs padding">
+        <button class="cu-btn bg-yuanweiblue round lg" bindtap="BindLeft">左键</button>
+      </view>
+      <view class="margin-xs padding">
+        <button class="cu-btn bg-grey round lg" bindtap="BindRight">右键</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,90 @@
+<!--pages/classFunction/regResult/regResult.wxml-->
+<view class="padding-left padding-right padding-bottom">
+  <!--总汇信息-->
+  <view class="padding padding-bottom-xs text-center text-xl text-black">签到结果</view>
+    <!--班级信息-->
+  <view class="margin-xs padding bg-white">
+    <view class="flex">
+      <view class="flex-sub">班级名称: <text class="text-lg">{{class_name}}</text></view>
+      <view class="flex-sub">班级总人数: <text class="text-lg">{{class_student_count}}</text></view>
+    </view>
+    <view class="flex padding-top">
+      <view class="flex-sub">未签到人数：<text class="text-lg">{{red_num}}</text></view>
+      <view class="flex-sub">成功签到人数：<text class="text-lg">{{green_num}}</text></view>
+    </view>
+  </view>
+  <!--方案1-->
+  <!--导航栏式信息-->
+  <scroll-view class="bg-{{red_show==true?'red':'green'}} nav">
+    <view class="flex text-center">
+      <view class="cu-item flex-sub {{red_show==true?'cur':''}}" bindtap="show_Red">未签到</view>
+      <view class="cu-item flex-sub {{green_show==true?'cur':''}}" bindtap="show_Green">成功签到</view>
+    </view>
+  </scroll-view>
+  <!--签到失败信息list-->
+  <view class="cu-list menu" wx:if="{{red_show}}">
+    <!--list单项-->
+    <view class="cu-item" wx:for="{{red_list}}" wx:for-item="item">
+      <view class="content">{{item.stu_no}}</view>
+      <view class="content">{{item.status}}</view>
+      <view class="action">{{item.name}}</view>
+    </view>
+  </view>
+  <!--签到成功信息list-->
+  <view class="cu-list menu" wx:if="{{green_show}}">
+    <!--list单项-->
+    <view class="cu-item" wx:for="{{green_list}}" wx:for-item="item">
+      <view class="content">{{item.stu_no}}</view>
+      <view class="action">{{item.name}}</view>
+    </view>  
+  </view>
+
+  <!--方案2-->
+  <!--展开式列表-->
+  <!--
+  <view class="padding cu-list menu">
+    <!--green status
+    <view class="cu-item">
+      <view class="content">签到成功</view>
+      <view class="action text-center">
+        <view>{{green_num}}人</view>
+        <view>
+          <text wx:if="{{green_show}}" class="cuIcon-fold"></text>
+          <text wx:else class="cuIcon-unfold"></text>
+        </view>
+      </view>
+    </view>
+    <!--green list(isShow)
+    <view class="flex" wx:if="{{green_show}}">
+      <view class="flex-sub">2017011XXX</view>
+      <view class="flex-sub">张三</view>
+    </view>
+
+    <!--red status
+    <view class="cu-item">
+      <view class="content">签到失败</view>
+      <view class="action text-center">
+        <view>{{red_num}}人</view>
+        <view>
+          <text wx:if="{{red_show}}" class="cuIcon-fold"></text>
+          <text wx:else class="cuIcon-unfold"></text>
+        </view>
+      </view>
+    </view>
+    <!--red list(isShow)
+    <view class="padding-left padding-right cu-list menu" wx:if="{{red_show}}">
+      <view class="cu-item item-border">
+        <view class="content">2017011XXX</view>
+        <view class="action">李四</view>
+      </view>
+
+      <view class="cu-item">
+        <view class="content">2017011XXX</view>
+        <view class="action">王五</view>
+      </view>
+    </view>
+
+  </view>
+  -->
+  
+</view>

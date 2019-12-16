@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+  <view class="padding bg-gradual-blue"  style="height: 100%; width: 100%;">
+
+    <view class="flex-sub padding-top-xs padding-right-sm padding-left-sm text-center">
+      <view class="cu-form-group radius bg-cyan light">
+        <text class="cuIcon-my lg text-gray"></text>
+        <input placeholder='学号' type="number" bindinput="StuNoInput"></input>
+      </view>
+    </view>
+
+    <view class="flex-sub padding-top-xs padding-right-sm padding-left-sm text-center">
+      <view class="cu-form-group radius bg-cyan light">
+        <text class="cuIcon-unlock lg text-gray"></text>
+        <input placeholder='密码(数字+字母,6-16位)' password="true" bindinput="Password1Input"></input>
+      </view>
+    </view>
+
+    <view class="flex-sub padding-top-xs padding-right-sm padding-left-sm text-center">
+      <view class="cu-form-group radius bg-cyan light">
+        <text class="cuIcon-unlock lg text-gray"></text>
+        <input placeholder='确认密码' password="true" bindinput="Password2Input"></input>
+      </view>
+    </view>
+
+    <view class="flex flex-direction padding">
+      <button class="cu-btn lg bg-olive shadow" type="primary" open-type='getUserInfo' bindgetuserinfo="regist">微信授权注册</button>
+    </view>
+  </view>

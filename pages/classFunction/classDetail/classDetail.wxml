@@ -1,0 +1,108 @@
+<!--pages/classDetail/classDetail.wxml-->
+
+<!--teacher_cover view-->
+<view class="padding popWindow" wx:if="{{isShow_teacher==true}}"></view>
+<view class="popmainWindow" wx:if="{{isShow_teacher==true}}">
+  <view class="padding flex text-center text-xl text-black">
+    <text class="flex-sub justify-end">签到</text>
+  </view>
+  <view class="line"></view>
+  <view class="padding flex text-black">
+    <view class="running padding-xs"><text class="cuIcon-icloading"></text></view>
+    <text class="text-df padding-xs"> 签到状态开启，学生可以进行签到</text>
+  </view>
+  <view class="flex padding">
+    <view class="flex-sub">
+      <button class="cu-btn round-xs bg-bamboogreen shadow" style="left: 60rpx;" bindtap="PopConfirm">结束</button>
+    </view>
+
+    <view class="flex-sub">
+      <button class="cu-btn round-xs bg-younggray shadow" style="left: 80rpx;" bindtap="Popup">取消</button>
+    </view>
+  </view>
+</view>
+
+<!--teacher view-->
+<view class="padding" style="background-color: #F5F5F5; height: 100%; width: 100%;" wx:if="{{isStudent==false}}">
+  <view class="cu-card cardSize">
+    <view class="cu-item bg-img shadow-blur cardSize">
+      <image class="round-sm" style="width:100%;" src="../../../images/class.jpg"></image>
+      <view class="title text-xxl text-white">课程名称：{{name}}</view>
+      <view class="code text-xl text-white">课程编码：{{code}}</view>
+    </view>
+  </view>
+
+  <!--功能图标区域-->
+  <view class="flex flex-direction margin-top-xs padding-left padding-right">
+    <view class="cu-btn lg bg-olive shadow">功能</view>
+  </view>
+
+  <view class="margin-left margin-right cu-list grid col-3 border">
+    <view class="cu-item" bindtap="regTeacher">
+      <view class="cuIcon-edit"></view>
+      <text>签到</text>
+    </view>
+
+    <view class="cu-item" bindtap="deleteClass">
+      <view class="cuIcon-delete"></view>
+      <text>删除</text>
+    </view>
+
+    <view class="cu-item" bindtap="computerControl">
+      <view class="cuIcon-cardboard"></view>
+      <text>控制</text>
+    </view>
+  </view>
+  <!--修改按钮为功能图标-->
+  <!--<view class="flex flex-direction padding">
+    <button class="cu-btn lg bg-red shadow" bindtap="deleteClass">删除此班级</button>
+  </view>-->
+</view>
+
+<!--student cover view-->
+<view class="padding popWindow" wx:if="{{isShow_student==true}}"></view>
+<view class="popmainWindow" wx:if="{{isShow_student==true}}">
+  <view class="flex-sub padding padding-bottom-xs text-center">
+      <view class="cu-form-group radius">
+        <input placeholder="输入当前所坐的座椅号" type="number" bindinput="inputSeat"></input>
+      </view>
+    </view>
+
+    <view class="flex flex-direction padding padding-top-xs padding-bottom-xs">
+      <button class="cu-btn lg bg-olive shadow" bindtap="regStudent">确认签到</button>
+      <button class="margin-top-xs cu-btn lg bg-grey shadow" bindtap="showRegStudetn">取消</button>
+    </view>
+  </view>
+
+<!--student view-->
+<view class="padding" style="background-color: #F5F5F5; height: 100%; width: 100%;" wx:if='{{isStudent==true}}'>
+  <view class="cu-card cardSize">
+    <view class="cu-item bg-img shadow-blur cardSize">
+      <image class="round-sm" style="width:100%;" src="../../../images/class.jpg"></image>
+      <view class="title text-xxl text-white">课程名称：{{name}}</view>
+      <view class="code text-xl text-white">课程编码：{{code}}</view>
+    </view>
+  </view>
+
+  <!--功能区域-->
+  <view class="flex flex-direction margin-top-xs padding-left padding-right">
+    <view class="cu-btn lg bg-olive shadow">功能</view>
+  </view>
+
+  <view class="margin-left margin-right cu-list grid col-3 border">
+    <view class="cu-item" bindtap="showRegStudetn">
+      <view class="cuIcon-edit"></view>
+      <text>开始签到</text>
+    </view>
+
+    <view class="cu-item" bindtap="quitClass">
+      <view class="cuIcon-footprint"></view>
+      <text>退出班级</text>
+    </view>
+  </view>
+
+  <!-- <view class="flex flex-direction padding padding-top-xs">
+    <button class="cu-btn lg bg-red shadow" bindtap="quitClass">退出此班级</button>
+  </view> -->
+
+</view>

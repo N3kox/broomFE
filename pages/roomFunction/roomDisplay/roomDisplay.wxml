@@ -1,0 +1,63 @@
+<!--pages/roomFunction/roomDislay/roomDisplay.wxml-->
+<view class="padding" style="height: 100%; width: 100%;">
+
+  <view class="flex justify-center">
+    <view class="padding text-sm">
+      <view class="text-balck">你的座椅</view>
+      <view class="bg-yellow radius" style="height: 40rpx; width: 95rpx"></view>
+    </view>
+
+    <view class="padding text-sm">
+      <view class="text-balck">坏的座椅</view>
+      <view class="bg-grey radius" style="height: 40rpx; width: 95rpx"></view>
+    </view>
+
+    <view class="padding text-sm">
+      <view class="text-balck">座椅可选</view>
+      <view class="bg-green radius" style="height: 40rpx; width: 95rpx"></view>
+    </view>
+
+    <view class="padding text-sm">
+      <view class="text-balck">座椅不可选</view>
+      <view class="bg-red radius margin-left-xs" style="height: 40rpx; width: 105rpx"></view>
+    </view>
+
+  </view>
+
+  <view class="flex padding-xs margin margin-top-xs align-center justify-between round-sm bg-white">
+    <view class="flex-twice padding">
+      <view class="text-xl text-black text-shadow margin-bottom-xs">当前教室：{{202}}</view>
+      <view class="text-lg text-black text-shadow margin-bottom-xs">温度：{{15}}</view>
+      <view class="text-lg text-black text-shadow margin-bottom-xs">湿度：{{15}}</view>
+    </view>
+
+    <view wx:if="{{isStudent==false}}" class="flex-sub">
+      <button class="padding-xs margin-xs cu-btn lines-olive shadow" bindtap='unlockRoom'>解锁教室</button>
+      <button class="padding-xs margin-xs cu-btn lines-red shadow" bindtap='lockRoom'>锁定教室</button>
+    </view>
+
+    <view wx:else class="flex-sub">
+      <button class="cu-btn lines-olive shadow" bindtap='seatFunction'>解锁座椅</button>
+    </view>
+  </view>
+
+  <view class="line"></view>
+
+  <view class="flex padding-sm justify-center align-end">
+    <image class="flex" style="height: 60rpx; width: 75rpx;" mode="aspectFit" src="../../../images/speaker.png"></image>
+    <text class="flex">讲台</text>
+  </view>
+
+  <view class="padding padding-top-xs" style="width: 100%;">
+    <view wx:for="{{room_array}}" wx:for-index="x" wx:for-item="item" class="grid col-15 margin-xs" style="width: 100%;">
+      <view wx:for="{{item}}" wx:for-index="y" wx:for-item="i">
+        <view wx:if='{{i==-1}}' id="{{x*clo+y}}" class="bg-grey radius" style="height: 55rpx; width: 38rpx" bindtap="{{isStudent?'click_seat':''}}"></view>
+        <view wx:if='{{i==0}}' id="{{x*clo+y}}" class="bg-green radius" style="height: 55rpx; width: 38rpx" bindtap="{{isStudent?'click_seat':''}}"></view>
+        <view wx:if='{{i==1}}' id="{{x*clo+y}}" class="bg-red radius" style="height: 55rpx; width: 38rpx" bindtap="{{isStudent?'click_seat':''}}"></view>
+        <view wx:if='{{i==2}}' id="{{x*clo+y}}" class="bg-yellow radius" style="height: 55rpx; width: 38rpx" bindtap="{{isStudent?'click_seat':''}}"></view>
+        <view wx:if='{{i==null}}' id="{{x*clo+y}}" class="bg-gray radius" style="height: 55rpx; width: 38rpx" bindtap="{{isStudent?'click_seat':''}}"></view>
+      </view>
+    </view>
+  </view>
+
+</view>
